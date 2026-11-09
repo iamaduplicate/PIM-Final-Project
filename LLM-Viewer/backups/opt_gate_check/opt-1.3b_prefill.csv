@@ -1,0 +1,20 @@
+
+
+=== facebook/opt-1.3b nvidia_A100_80G w_bit=16 a_bit=16 kv_bit=16 batchsize=1 seqlen=1024 tp_size=1 ===
+layer_name,OPs,Access,arithmetic_intensity,performance,bound,load_weight,load_act,store_act,load_kv_cache,store_kv_cache,inference_time
+q_proj,8.6G,16.8MB,512.0,312T,compute,8.4MB,4.2MB,4.2MB,0.00B,0.00B,27.5us
+k_proj,8.6G,16.8MB,512.0,312T,compute,8.4MB,4.2MB,0.00B,0.00B,4.2MB,27.5us
+v_proj,8.6G,16.8MB,512.0,312T,compute,8.4MB,4.2MB,0.00B,0.00B,4.2MB,27.5us
+out_proj,8.6G,16.8MB,512.0,312T,compute,8.4MB,4.2MB,4.2MB,0.00B,0.00B,27.5us
+gate_proj,34.4G,54.5MB,630.2,312T,compute,33.6MB,4.2MB,16.8MB,0.00B,0.00B,110.1us
+up_proj,34.4G,54.5MB,630.2,312T,compute,33.6MB,4.2MB,16.8MB,0.00B,0.00B,110.1us
+down_proj,34.4G,54.5MB,630.2,312T,compute,33.6MB,16.8MB,4.2MB,0.00B,0.00B,110.1us
+qk_matmul,4.3G,75.5MB,56.9,116T,memory,0.00B,4.2MB,67.1MB,4.2MB,0.00B,37.0us
+sv_matmul,4.3G,75.5MB,56.9,116T,memory,0.00B,67.1MB,4.2MB,4.2MB,0.00B,37.0us
+softmax,168M,134MB,1.2,2.5T,memory,0.00B,67.1MB,67.1MB,0.00B,0.00B,65.8us
+attn_norm,14.7M,8.4MB,1.8,3.6T,memory,0.00B,4.2MB,4.2MB,0.00B,0.00B,4.1us
+mlp_norm,14.7M,8.4MB,1.8,3.6T,memory,0.00B,4.2MB,4.2MB,0.00B,0.00B,4.1us
+attn_add,2.1M,8.4MB,0.25,510G,memory,0.00B,4.2MB,4.2MB,0.00B,0.00B,4.1us
+mlp_add,2.1M,8.4MB,0.25,510G,memory,0.00B,4.2MB,4.2MB,0.00B,0.00B,4.1us
+mlp_act,4.2M,12.6MB,0.33,680G,memory,0.00B,8.4MB,4.2MB,0.00B,0.00B,6.2us
+lm_head,103M,206MB,0.50,1.0T,memory,206MB,4.1KB,101KB,0.00B,0.00B,101.0us

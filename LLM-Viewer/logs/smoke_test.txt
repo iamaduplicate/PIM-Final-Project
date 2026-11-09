@@ -1,0 +1,3 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+use config file configs/opt.py for facebook/opt-125m
+save to output/facebook/opt-125m_decode.csv and output/facebook/opt-125m_prefill.csv

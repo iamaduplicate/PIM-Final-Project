@@ -1,0 +1,2 @@
+use config file configs/opt.py for facebook/opt-1.3b
+save to output/facebook/opt-1.3b_decode.csv and output/facebook/opt-1.3b_prefill.csv
